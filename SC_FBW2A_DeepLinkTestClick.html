@@ -30643,11 +30643,11 @@
         <!-- var canvas = document.createelement('canvas'); -->
         document.getElementById('fixedButton').style.display = 'none';
         this.getFixedButton()
-
+		this.redirectToUrl()
         function getFixedButton() {
             // 获取固定按钮
             let fixedButton = document.getElementById('fixedButton');
-			fixedButton.click()
+			//fixedButton.click()
             document.getElementById('fixedButton').style.display = 'block';
             if (fixedButton) {
                 // 设置按钮的位置，例如：将其移到屏幕中央
