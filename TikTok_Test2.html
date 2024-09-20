@@ -29915,7 +29915,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                                 window.location.href = e
                             }).catch(function() {
                                  window.location.href = e
-                            }), console.log(t)
+                            }), console.log(t), ttq.track('ClickButton')
                         }, e.prototype.onSendEvent = function(t) {
                             console.log(t), ttq.track(t), getEventTrackingAxios(t)
                         }, e.instance = null, n = r([i], e)
@@ -30479,7 +30479,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <script>
         // 获取当前页面的 URL 查询字符串
         //const queryString = window.location.search;
-
         var clickURL = 'https://apps.apple.com/app/solitaire-clash-win-real-cash/id1589643727?ppid=4a492a5d-92ae-4f96-8d20-aec8cce32aef'
 
         function getDeviceModel() {
@@ -30527,6 +30526,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                             creative_id: creative_id,
                             cookie: getCookie('_ttp'),
                             cur_search: curParamsSearch,
+							referrer: document.referrer,
                             //onelink_url: clickURL
                         }
                     }
