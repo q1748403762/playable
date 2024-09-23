@@ -30468,12 +30468,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         campaign = urlParams.get("campaign");
         adgroup = urlParams.get("adgroup");
         creative = urlParams.get("creative");
-        idfa = urlParams.get("idfa");
-        gps_adid = urlParams.get("gps_adid");
         campaign_id = urlParams.get("campaign_id");
         adgroup_id = urlParams.get("adgroup_id");
         creative_id = urlParams.get("creative_id");
         ttClid = urlParams.get("ttclid");
+		media_source =  urlParams.get("media_source");
     </script>
 
     <script>
@@ -30516,14 +30515,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
                             activity_kind: "event_tracking",
                             click_link: window.location.href,
                             click_id: ttClid,
-                            campaign: campaign,
-                            adgroup: adgroup,
-                            creative: creative,
-                            idfa: idfa,
-                            gps_adid: gps_adid,
+							media_source:media_source,
+                            campaign_name: campaign,
+                            adset_name: adgroup,
+                            ad_name: creative,
                             campaign_id: campaign_id,
-                            adgroup_id: adgroup_id,
-                            creative_id: creative_id,
+                            adset_id: adgroup_id,
+                            ad_id: creative_id,
                             cookie: getCookie('_ttp'),
                             cur_search: curParamsSearch,
 							referrer: document.referrer,
