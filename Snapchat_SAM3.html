@@ -58,7 +58,7 @@
     </script>
     <!-- End Snap Pixel Code -->
     <script src="https://amp-marketing-h5.s3.amazonaws.com/webSource/axios.js"></script>
-    <style>
+ <style>
         /* 保证按钮在页面的右下角，并且位于 Cocos 渲染之上 */
         
         #fixedButton {
@@ -29942,7 +29942,7 @@
                             getEventTrackingAxios(t).then(function() {
                                 window.location.href = e
                             }).catch(function() {
-                                window.location.href = e
+                                 window.location.href = e
                             }), console.log(t)
                         }, e.prototype.onSendEvent = function(t) {
                             console.log(t), fbq("trackCustom", t), getEventTrackingAxios(t)
@@ -30488,6 +30488,11 @@
                 return parts.pop().split(';').shift();
             }
         }
+		
+		console.log(document.cookie)
+		//getCookie('ttclid') // TikTok Click ID
+		//getCookie('_ttp') //Cookie id
+
     </script>
 
     <script>
@@ -30508,16 +30513,16 @@
         // 获取当前页面的 URL 查询字符串
         //const queryString = window.location.search;
 
-        var baseurl = 'https://bubblebuzzbubbleshoot.onelink.me/HZpv/o2ba5fm0'
-
-        // 获取当前页面的 URL 查询字符串
+        var baseurl = 'https://bingotour.onelink.me/giT8/gjm3vw8g'
+		
+		 // 获取当前页面的 URL 查询字符串
         const queryString = window.location.search;
 
         // 检查基础 URL 是否已经有参数（是否有 ?）
         const separator = baseurl.includes('?') ? '&' : '?';
-        console.log(separator + queryString.slice(1));
-        const clickURL = baseurl + separator + queryString.slice(1); // 去掉querystring的`?`号 
-        console.log(clickURL);
+		console.log(separator + queryString.slice(1));
+		const clickURL = baseurl + separator + queryString.slice(1); // 去掉querystring的`?`号 
+		console.log(clickURL);
 
 
         function getDeviceModel() {
@@ -30601,11 +30606,11 @@
                 //  end
         });
     </script>
-    <!-- 固定在右下角的按钮 -->
+	 <!-- 固定在右下角的按钮 -->
     <button id="fixedButton" onclick="redirectToUrl()">
         跳转按钮
     </button>
-    <script type="text/javascript">
+	<script type="text/javascript">
         <!-- var canvas = document.createelement('canvas'); -->
         document.getElementById('fixedButton').style.display = 'none';
         this.getFixedButton()
