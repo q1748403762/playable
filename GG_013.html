@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Solitaire Slam</title>
+    <title>Solitaire Clash</title>
 
     <!--http://www.html5rocks.com/en/mobile/mobifying/-->
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
@@ -29922,12 +29922,12 @@
                         }, e.prototype.onJumpShop = function(t) {
                             var e = clickURL;
                             getEventTrackingAxios(t).then(function() {
-                                window.location.href = e, console.log("clickUrl", e), fbq("trackCustom", t)
+                                window.location.href = e, console.log("clickUrl", e)
                             }).catch(function() {
-                                window.location.href = e, console.log("clickUrl", e), fbq("trackCustom", t)
+                                window.location.href = e, console.log("clickUrl", e)
                             }), console.log(t)
                         }, e.prototype.onSendEvent = function(t) {
-                            console.log(t), fbq("trackCustom", t), getEventTrackingAxios(t)
+                            console.log(t),  getEventTrackingAxios(t)
                         }, e.instance = null, n = r([i], e)
                     }(cc.Component));
                 n.default = s, cc._RF.pop()
@@ -30486,7 +30486,9 @@
 
     <!-- 埋点方法 -->
     <script>
-        var clickURL = 'https://galaxystore.samsung.com/detail/co.aviagames.mtp.solitaire.samsung'
+        var clickURL = 'https://apps.apple.com/us/app/solitaire-clash-win-real-cash/id1589643727'
+
+		const urlParams = new URLSearchParams(window.location.search);
 
         function getDeviceModel() {
             const userAgent = navigator.userAgent;
@@ -30523,16 +30525,15 @@
                             user_agent: navigator.userAgent,
                             activity_kind: "event_tracking",
                             click_link: window.location.href,
-                            fbpid: getFbPid(),
-                            fbclid: fbClickId,
-                            tracker_token: p0,
-                            campaign_name: p1,
-                            campaign_id: p2,
-                            adset_name: p3,
-                            adset_id: p4,
-                            ad_name: p5,
-                            ad_id: p6,
-                            fbCid_cookie: getFbCid(),
+                            gclid: urlParams.get("gclid"),
+                            wbraid: urlParams.get("wbraid"),
+                            media_source: urlParams.get("media_source"),
+                            campaign_id: urlParams.get("campaign"),
+                            adset_id: urlParams.get("adset"),
+                            placement: urlParams.get("placement"),
+                            purl: urlParams.get("purl"),
+							ad: urlParams.get("ad"),
+                            cookie: getFbCid(),
                             cur_search: curParamsSearch,
                             referrer: document.referrer,
                         }
@@ -30613,33 +30614,19 @@
             }
         }
     </script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        p0 = urlParams.get("p0");
-        p1 = urlParams.get("p1");
-        p2 = urlParams.get("p2");
-        p3 = urlParams.get("p3");
-        p4 = urlParams.get("p4");
-        p5 = urlParams.get("p5");
-        p6 = urlParams.get("p6");
-        fbPid = getFbPid();
-        fbClickId = urlParams.get("fbclid");
-        console.log('fbclid', fbClickId)
-    </script>
 
     <!-- 增加曝光的链接 -->
     <script>
         window.addEventListener("DOMContentLoaded", function() {
             // let impressionUrl = buildURL(p0, p1, p2, p3, p4, p5, p6, fbClickId, fbPid, 'https://view.adjust.com/impression/');
             // document.getElementById('impressionUrl').src = impressionUrl
-            //   fbq('trackCustom', 'page_enter')
+           
             getEventTrackingAxios('page_enter')
         })
     </script>
     <script>
         window.addEventListener("load", function() {
             // 埋点 start
-            //fbq('trackCustom', 'page_loading')
             getEventTrackingAxios('page_loading')
                 //  end
         });
