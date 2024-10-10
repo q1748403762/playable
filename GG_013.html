@@ -35,6 +35,15 @@
     <!--<meta name="browsermode" content="application">-->
     <meta name="x5-page-mode" content="app">
     <!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=533VHW6S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '533VHW6S');
+</script>
+
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -178,8 +187,11 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-533VHW6S"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-533VHW6S"
+  height="0" width="0" style="display:none;visibility:hidden">
+  </iframe>
+  </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script type="text/javascript">
         var APPLE_URL = "",
@@ -30620,7 +30632,14 @@
         window.addEventListener("DOMContentLoaded", function() {
             // let impressionUrl = buildURL(p0, p1, p2, p3, p4, p5, p6, fbClickId, fbPid, 'https://view.adjust.com/impression/');
             // document.getElementById('impressionUrl').src = impressionUrl
-           
+			console.log(window.location.href)
+			console.log(window.location.pathname)
+			console.log(document.title)
+           gtag("event", "page_view", {
+			page_location: window.location.href,
+			page_path: window.location.pathname,
+			page_title: document.title
+			});
             getEventTrackingAxios('page_enter')
         })
     </script>
