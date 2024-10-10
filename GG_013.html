@@ -35,13 +35,13 @@
     <!--<meta name="browsermode" content="application">-->
     <meta name="x5-page-mode" content="app">
     <!-- Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=533VHW6S"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-533VHW6S"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '533VHW6S');
+  gtag('config', 'GTM-533VHW6S');
 </script>
 
     <script>
@@ -29934,12 +29934,12 @@
                         }, e.prototype.onJumpShop = function(t) {
                             var e = clickURL;
                             getEventTrackingAxios(t).then(function() {
-                                window.location.href = e, console.log("clickUrl", e)
+                                window.location.href = e, console.log("clickUrl", e), gtag("event", t, {})
                             }).catch(function() {
-                                window.location.href = e, console.log("clickUrl", e)
-                            }), console.log(t)
+                                window.location.href = e, console.log("clickUrl", e), gtag("event", t, {})
+                            }), 
                         }, e.prototype.onSendEvent = function(t) {
-                            console.log(t),  getEventTrackingAxios(t)
+                           gtag("event", t, {}),  getEventTrackingAxios(t)
                         }, e.instance = null, n = r([i], e)
                     }(cc.Component));
                 n.default = s, cc._RF.pop()
@@ -30646,6 +30646,7 @@
     <script>
         window.addEventListener("load", function() {
             // 埋点 start
+			
             getEventTrackingAxios('page_loading')
                 //  end
         });
