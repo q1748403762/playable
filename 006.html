@@ -92,10 +92,12 @@
 		gtag('get', 'G-DBBBNLF0EK', 'client_id', function(clientId) {
 			console.log('CID:', clientId);
 			client_id = clientId
+			console.log('CID:CC', client_id);
 		});
 		gtag('get', 'G-DBBBNLF0EK', 'session_id', function(sessionId) {
 			console.log('SID:', sessionId);
 			session_id = sessionId
+			console.log('SID:SS', session_id);
 		});
 
         function getDeviceModel() {
@@ -120,6 +122,8 @@
         function getEventTrackingAxios(eventName) {
             // 当前路径的参数字符串 带?
             let curParamsSearch = window.location.search
+			console.log('CID:Test', client_id);
+			console.log('SID:Test', session_id);
             return axios
                 .get(
                     'https://pub.api.amp-udp.bigbeargames.net/amp-udp-data-ingest/api/v1/adjust', // 生产地址
